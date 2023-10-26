@@ -18,12 +18,9 @@ app.use(express.json());
 
 app.use("/", require("./routes/userRoute"));
 
-app.use(
-  cors({
-    origin: "http://localhost:5175",
-    credentials: true,
-  })
-);
+app.use(cors());
+
+
 
 
 
