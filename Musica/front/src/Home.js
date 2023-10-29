@@ -5,7 +5,7 @@ import Home from "./Home.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlay,faBackwardStep,faForwardStep, faHeart, faCirclePause} from '@fortawesome/free-solid-svg-icons'
 import { useRef, useState ,useEffect } from "react";
-import Card1 from "./Components/Card";
+import Card1 from "./Components/Card"
 
 
 

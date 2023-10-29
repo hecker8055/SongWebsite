@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import img2 from "./Components/Images/google1.png";
 import axios from "axios";
@@ -25,6 +25,7 @@ const Login = () => {
         if (response.data.error) {
           toast.error("unauthorized");
         } else {
+          ;
           setEmail("");
           setPass("");
           toast.success("login successful")
@@ -50,6 +51,10 @@ const Login = () => {
         setEmail("");
         setPass("");
         toast.success("login successful")
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ ...response.user, Password: "" })
+        );
         navigate("/");
       }
     } catch (error) {
@@ -62,6 +67,11 @@ const Login = () => {
       alert("Enter all the details");
     }
   };
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      navigate("/");
+    }
+  }, [navigate]);
 
   return (
     <>
@@ -70,7 +80,7 @@ const Login = () => {
           <form onSubmit={handleSubmit} className='text-center flex flex-col items-center mt-6'>
             <label className='w-80 font-bold mb-2' htmlFor='email'>Email</label>
             <input
-              className='w-80 ml-7 rounded-2xl h-10 mb-3 text-black outline-none pl-2'
+              className='w-80 ml-7 rounded-2xl h-12 mb-3 text-black outline-none pl-2'
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -84,7 +94,7 @@ const Login = () => {
               onChange={(e) => setPass(e.target.value)}
               placeholder='Enter your password'
             />
-            <button className='mb-2'>Forgot Password</button>
+            
             <button onClick={check} className='w-80 ml-7 rounded-2xl bg-blue-600 h-11 text-center mb-8' type='submit'>Log In</button>
             <p className='text-xs mb-6 ml-3'>Or continue with-</p>
             <div className="google relative">
