@@ -17,13 +17,11 @@ const Home1 = (props) => {
   const [duration, setDuration] = useState(0)
   const [currentTime, setCurrentTime] = useState(0);
   const [song, setsong] = useState([
-    "Leke Prabhu Ka naam",
-    "Faded",
-    "Harley's in Hawai",
-    "Kahani Suno",
-    "song-5",
-    "song-6"
+      "banke hawa",
+      "banke hawa mai",
+      "banke hawa mai -3"
   ])
+ 
 
 
   const currentPlaying= song[current];
@@ -156,14 +154,11 @@ const Home1 = (props) => {
        </div>
     </div> 
 {/****************************************************************   HOME PAGE  *********************************************************** */}
-    <Card1/>
-    <Card1/>
-    <Card1/>
-    <Card1/>
-    <Card1/>
-    <Card1/>
-    <Card1/>
-    <Card1/>
+<div className="container song">
+       <div className="row">
+       <Card1 song={song}/>
+       </div>
+    </div>
     
     <Footer/>
     </>

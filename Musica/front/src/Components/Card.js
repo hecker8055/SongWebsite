@@ -26,12 +26,12 @@ import img16 from "./Images/Slider-2/16.webp"
 import img17 from "./Images/Slider-2/17.webp"
 import img18 from "./Images/Slider-2/18.webp"
 
-const Card1 = () => {
+const Card1 = (props) => {
   return (
     <>
-       <div className="new-release mt-9">
-      <h1 className="text-white  uppercase mb-3 text-2xl font-medium">New releases</h1>
-      <div className="slider-2">
+      {/* <div className="new-release mt-9">
+        <h1 className="text-white  uppercase mb-3 text-2xl font-medium">New releases</h1>
+        <div className="slider-2">
          <Swiper
             spaceBetween={20}
             slidesPerView={6}
@@ -74,7 +74,13 @@ const Card1 = () => {
             <SwiperSlide><img src={img18} alt="" /></SwiperSlide>  
          </Swiper>
       </div>
-    </div>
+    </div> */}
+
+        {props.song.map((songs,index)=>(
+          <div className='flex justify-center m-3 '>
+            <img className='text-white' src={songs} alt='songs'></img>
+          </div>
+        ))}
     </>
   )
 }

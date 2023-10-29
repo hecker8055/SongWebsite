@@ -18,6 +18,11 @@ html,body{
     height: 2px;
 }
 
+.song > .row{
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
 
 
 
