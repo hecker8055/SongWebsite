@@ -1,9 +1,10 @@
-import  { useState} from 'react';
+import  { useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import img2 from "./Components/Images/google1.png";
+
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+
 
 const Register = () => {
   const navigate = useNavigate();
@@ -33,6 +34,12 @@ const Register = () => {
       console.log(error);
     }
   };
+  
+  useEffect(( ) => {
+    if (localStorage.getItem("user")){
+      navigate('/')
+    }
+  }, [navigate]);
     
 
   const check = () => {
@@ -72,11 +79,8 @@ const Register = () => {
               placeholder='Enter your password'
             />
             <button onClick={check} className='w-80 ml-7  rounded-2xl bg-blue-600 h-11 text-center mb-8' type='submit'>Sign Up</button>
-            <p className='text-xs mb-8 ml-3'>Or continue with-</p>
-            <div className="google relative mb-5">
-              <img className='bg-blue-600 w-7 absolute left-14 text-center top-2' src={img2} alt="" />
-              <button className='text-center w-80 ml-7 rounded-2xl bg-blue-600 h-11 mb-8'>Continue with Google</button>
-            </div>
+            
+            
             <Link to="/login"><button className='ml-6 text-center text-xs hover:underline'>Have an account? Login here.</button></Link>
           </form>
         </div>
