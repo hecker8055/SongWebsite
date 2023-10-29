@@ -80,7 +80,7 @@ const Login = () => {
           <form onSubmit={handleSubmit} className='text-center flex flex-col items-center mt-6'>
             <label className='w-80 font-bold mb-2' htmlFor='email'>Email</label>
             <input
-              className='w-80 ml-7 rounded-2xl h-10 mb-3 text-black outline-none pl-2'
+              className='w-80 ml-7 rounded-2xl h-12 mb-3 text-black outline-none pl-2'
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
