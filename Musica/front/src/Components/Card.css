@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0D0F12;
+}
+
+.new-release{
+    /* height: 37vh; */
+    padding-left: 4.44vw;
+    padding-right: 4.44vw;
+    background: transparent;
+}
+
+.main{
+    background-color: #0D0F12;
+}
+
+.range{
+    height: 2px;
+}
+
+.new-release img{
+    height: 28vh;
+    border-radius: 0.9vw;
+}
+
+
+@media (max-width:600px) {
+     
+    .new-release{
+        height: 35vh;
+        /* padding-bottom: 12vh; */
+    }
+
+    
+}
+
+
+
+
+
+
+
