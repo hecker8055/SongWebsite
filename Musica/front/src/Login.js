@@ -66,7 +66,7 @@ const Login = () => {
   return (
     <>
       <div className="body w-full h-screen items-center justify-center flex bg-emerald-50 bg-transparent">
-        <div className="main text-center flex bg-black w-96 rounded-2xl h-3/5 text-white z-10">
+        <div className="main text-center flex bg-black w-96 rounded-2xl h-4/5 text-white z-10">
           <form onSubmit={handleSubmit} className='text-center flex flex-col items-center mt-6'>
             <label className='w-80 font-bold mb-2' htmlFor='email'>Email</label>
             <input
