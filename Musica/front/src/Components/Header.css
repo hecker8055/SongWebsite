@@ -3,12 +3,6 @@
 }
 
 
-
-
-
-
-
-
 @media (max-width:600px) {
     .logo1{
         display: block;
@@ -17,6 +11,7 @@
 
     .logo{
         display: none;
+        --seek-before-width:0;
     }
 
     div.swiper-button-next, div.swiper-button-prev{
