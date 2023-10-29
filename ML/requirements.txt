@@ -1,0 +1,10 @@
+fastapi
+pydantic
+json
+numpy
+pandas
+seaborn
+tqdm        
+scikit-learn
+spotipy
+                          
