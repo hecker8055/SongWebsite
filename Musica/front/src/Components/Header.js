@@ -35,7 +35,7 @@ const Header1 = () => {
         </div>
         <div className="nav-right flex items-center w-3/5 justify-evenly">
           <div className="search flex items-center">
-            <FontAwesomeIcon className='text-center bg-white h-10 w-5 rounded-s-3xl pl-3 sm:block hidden' icon={faMagnifyingGlass} />
+          <Link to="/Search"><FontAwesomeIcon className='search-icon text-center bg-white h-10 w-5 rounded-s-3xl pl-3 sm:block' icon={faMagnifyingGlass} /></Link>
             <Link to="/Search">
               <input className='h-10 rounded-e-3xl w-48 sm:block hidden border-none outline-none pl-1 sm:w-96' type="text" />
             </Link>
@@ -50,6 +50,7 @@ const Header1 = () => {
               <div className='text-black pr-3 pl-3 pt-2 pb-2 bg-white rounded-2xl font-medium'>Login</div>
             </Link>
           )}
+
         </div>
       </div>
     </>

@@ -9,20 +9,16 @@ import Card1 from "./Components/Card"
 
 
 
-
-const Home1 = (props) => {
+const Home1 = () => {
 
   const [current, setcurrent] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false)
   const [duration, setDuration] = useState(0)
   const [currentTime, setCurrentTime] = useState(0);
   const [song, setsong] = useState([
-      "banke hawa",
-      "banke hawa mai",
-      "banke hawa mai -3"
+    "arijit singh"
   ])
  
-
 
   const currentPlaying= song[current];
 
@@ -99,6 +95,7 @@ const Home1 = (props) => {
     changePlayerCurrentTime();
   }
 
+  // const [heartColor, setheartColor] = useState(false)
 
 
    const changePlayerCurrentTime=()=>{
@@ -138,14 +135,14 @@ const Home1 = (props) => {
     <div className="main fixed h-20 bg-white w-full z-10 bottom-0 shadow-inner flex flex-col">
        <input className=" range w-full top-0 absolute border-0 " type="range" defaultValue="0" ref={progressBar} onChange={changeRange}/>
        <audio ref={audioPlayer} src="http://codeskulptor-demos.commondatastorage.googleapis.com/pang/paza-moduless.mp3" preload="metadata"></audio>
-       <div className="play flex items-center justify-evenly mt-5 w-full ">
-           <h2 className="text-white w-48 gap-20 rounded-xl h-12 text-start"> {currentPlaying}</h2>
-           <div className="music-duration flex w-32">
+       <div className="play flex items-center gap-40 mt-5 w-full ">
+           <h2 className=" current-song text-white w-28 ml-56 rounded-xl h-12 text-start uppercase"> {currentPlaying}</h2>
+           <div className="music-duration flex text-start w-24">
               <div className=" current text-white mb-5 mr-1">{calculateTime(currentTime)}</div>
-              <div className="text-white mb-5">/</div>
+              <div className="slash text-white mb-5">/</div>
               <div className="duration text-white mb-5 ml-1" ref={progressBar}>{(duration && !isNaN(duration)) && calculateTime(duration)}</div>
            </div>
-           <div className="control-play mb-3 " >
+           <div className="control-play mb-4 flex" >
               <button className="text-white text-xl" onClick={prevSong}><FontAwesomeIcon className='mr-3 mb-px' icon={faBackwardStep} /></button>
               <button className="text-white text-2xl"onClick={togglePlayPause} >{(isPlaying)?<FontAwesomeIcon className='' icon={faCirclePause} />:<FontAwesomeIcon className='' icon={faCirclePlay} />}</button>
               <button className="text-white text-xl" onClick={nextSong} ><FontAwesomeIcon className='ml-3 mb-px' icon={faForwardStep} /></button>
@@ -154,12 +151,41 @@ const Home1 = (props) => {
        </div>
     </div> 
 {/****************************************************************   HOME PAGE  *********************************************************** */}
-<div className="container song">
-       <div className="row">
+{/* <div className="container song full pl-12 pr-12">
+       
        <Card1 song={song}/>
+      
+    </div> */}
+    <h1 className="text-white uppercase mt-8 mb-2 text-sm font-medium para">New releases</h1>
+     <div className="container song">
+       <div className="row">
+          <Card1/>
+       </div>
+    </div> 
+    <h1 className="text-white uppercase mt-4 mb-2 text-sm font-medium para">LATEST TRENDING</h1>
+    <div className="container song">
+       <div className="row">
+          <Card1/>
        </div>
     </div>
-    
+    <h1 className="text-white uppercase mt-4 mb-2 text-sm font-medium para">ARIJIT SINGH</h1>
+    <div className="container song">
+       <div className="row">
+          <Card1/>
+       </div>
+    </div>
+    <h1 className="text-white uppercase mt-4 mb-2 text-sm font-medium para">80's SONG</h1>
+    <div className="container song">
+       <div className="row">
+          <Card1/>
+       </div>
+    </div>
+    <h1 className="text-white uppercase mt-4 mb-2 text-sm font-medium para">ROMANTIC SONGS</h1>
+    <div className="container song">
+       <div className="row">
+          <Card1/>
+       </div>
+    </div>
     <Footer/>
     </>
   )

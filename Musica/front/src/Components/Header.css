@@ -17,6 +17,14 @@
     div.swiper-button-next, div.swiper-button-prev{
         display: none;
     }
+
+    .search-icon{
+        background-color: #0D0F12;
+        color: white;
+        margin-top: 1vh;
+        margin-left: 17vw;
+        margin-bottom: 0.5vh;
+    }
 }
 
 

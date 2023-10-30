@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Footer from "./Footer.css"
 
-const Footer = () => {
+const Footer1 = () => {
   return (
-    <footer className="bg-black">
+    <>
+    <footer className="bg-black footer">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-4 lg:py-8">
             <div className='flex justify-evenly'>
                 <div>
@@ -47,8 +49,14 @@ const Footer = () => {
                     <p className="text-center text-sm text-gray-500 sm:text-center p-2 pb-4">
                         &copy; 2023 Movie Recommendation website. All Rights Reserved.
                     </p>
+                    <div className="h-16"></div>
         </footer>
+        <p className="text-center text-sm text-gray-500 sm:text-center p-2 pb-4 mobile-footer">
+                        &copy; 2023 Movie Recommendation website. All Rights Reserved.
+                    </p>
+                    <div className="h-16"></div>
+        </>
   )
 }
 
-export default Footer
+export default Footer1
