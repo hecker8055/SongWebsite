@@ -48,13 +48,14 @@ html,body{
     .slider{
         display: flex;
         width: 100%;
-        height: 11vh;
+        height: 15vh;
     }
 
     .responsive{
-        width: 20vw;
-        margin-right: 1.5vw;
+        width: 27.5vw;
+        margin-right: 2.5vw;
         border-radius: 1.8vw;
+        /* object-fit: cover; */
     }
 
     
