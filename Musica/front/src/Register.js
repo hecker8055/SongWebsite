@@ -1,12 +1,11 @@
 import  { useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
-
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 
-const Register = () => {
+const Register = (props) => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -85,6 +84,7 @@ const Register = () => {
           </form>
         </div>
       </div>
+        
     </>
   );
 };

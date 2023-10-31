@@ -29,8 +29,8 @@ import img18 from "./Images/Slider-2/18.webp"
 const Card1 = (props) => {
   return (
     <>
-      {/* <div className="new-release mt-9">
-        <h1 className="text-white  uppercase mb-3 text-2xl font-medium">New releases</h1>
+      <div className="new-release mt-9">
+        <h1 className="text-white uppercase mb-3 text-2xl font-medium">New releases</h1>
         <div className="slider-2">
          <Swiper
             spaceBetween={20}
@@ -44,8 +44,7 @@ const Card1 = (props) => {
             navigation={true}
             breakpoints={{
                0: {
-                 slidesPerView: 3,
-                 
+                 slidesPerView: 0,
                },
                640: {
                  slidesPerView: 6,
@@ -54,33 +53,67 @@ const Card1 = (props) => {
             modules={[Pagination, Navigation,Mousewheel]}
             className="mySwiper"
            >
-            <SwiperSlide><img src={img1} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img2} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img3} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img4} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img5} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img6} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img7} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img8} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img9} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img10} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img11} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img12} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={img13} alt="" /></SwiperSlide>     
-            <SwiperSlide><img src={img14} alt="" /></SwiperSlide>  
-            <SwiperSlide><img src={img15} alt="" /></SwiperSlide>  
-            <SwiperSlide><img src={img16} alt="" /></SwiperSlide>  
-            <SwiperSlide><img src={img17} alt="" /></SwiperSlide>  
-            <SwiperSlide><img src={img18} alt="" /></SwiperSlide>  
+            <SwiperSlide><img className='responsive'src={img1} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img2} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img3} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img4} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img5} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img6} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img7} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img8} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img9} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img10} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img11} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img12} alt="" /></SwiperSlide>
+            <SwiperSlide><img className='responsive'src={img13} alt="" /></SwiperSlide>     
+            <SwiperSlide><img className='responsive'src={img14} alt="" /></SwiperSlide>  
+            <SwiperSlide><img className='responsive'src={img15} alt="" /></SwiperSlide>  
+            <SwiperSlide><img className='responsive'src={img16} alt="" /></SwiperSlide>  
+            <SwiperSlide><img className='responsive'src={img17} alt="" /></SwiperSlide>  
+            <SwiperSlide><img className='responsive'src={img18} alt="" /></SwiperSlide>  
          </Swiper>
       </div>
-    </div> */}
+    </div>
 
-        {props.song.map((songs,index)=>(
+        {/* {props.song.map((songs,index)=>(
           <div className='flex justify-center m-3 '>
-            <img className='text-white' src={songs} alt='songs'></img>
+            <img className='text-white mr-4' src={img1} alt='songs'></img>
+            <img className='text-white mr-4' src={img2} alt='songs'></img>
+            <img className='text-white mr-4' src={img1} alt='songs'></img>
+            <img className='text-white mr-4' src={img2} alt='songs'></img>
+            <img className='text-white mr-4' src={img1} alt='songs'></img>
+            <img className='text-white mr-4' src={img2} alt='songs'></img>
+            <img className='text-white mr-4' src={img1} alt='songs'></img>
+            <img className='text-white mr-4' src={img2} alt='songs'></img>
+            <img className='text-white mr-4' src={img1} alt='songs'></img>
+            <img className='text-white mr-4' src={img2} alt='songs'></img>
+            <img className='text-white mr-4' src={img2} alt='songs'></img>
+            <img className='text-white mr-4' src={img2} alt='songs'></img>
+            <img className='text-white mr-4' src={img2} alt='songs'></img>
           </div>
-        ))}
+        ))} */} 
+
+        
+        <div className="slider">
+            <img className='responsive'src={img1} alt="" />
+            <img className='responsive'src={img2} alt="" />
+            <img className='responsive'src={img3} alt="" />
+            <img className='responsive'src={img4} alt="" />
+            <img className='responsive'src={img5} alt="" />
+            <img className='responsive'src={img6} alt="" />
+            <img className='responsive'src={img7} alt="" />
+            <img className='responsive'src={img8} alt="" />
+            <img className='responsive'src={img9} alt="" />
+            <img className='responsive'src={img10} alt="" />
+            <img className='responsive'src={img11} alt="" />
+            <img className='responsive'src={img12} alt="" />
+            <img className='responsive'src={img13} alt="" />     
+            <img className='responsive'src={img14} alt="" />  
+            <img className='responsive'src={img15} alt="" />  
+            <img className='responsive'src={img16} alt="" />  
+            <img className='responsive'src={img17} alt="" />  
+            <img className='responsive'src={img18} alt="" /> 
+        </div>
     </>
   )
 }
